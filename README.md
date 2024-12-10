@@ -17,7 +17,15 @@ En el "HOME" hay acceso a 5 pestañas: NOSOTROS, OBRAS SOCIALES, PREGUNTAS FRECU
 A través de esta WebApp, podrás:
 Agendar citas médicas online, Elegir especialistas; Realizar Consultas virtuales, visualizar historial médico.
 
-[Mencionar aca las tecnologías principales utilizadas en el desarrollo de TELEMED, por ejemplo: React, Node.js, MongoDB, etc.]
+### Tecnologías utilizadas en el desarrollo de TELEMED
+FrontEnd: 
+![react](https://github.com/user-attachments/assets/406db800-0846-432e-8f78-24fd87529ea9)
+![ts](https://github.com/user-attachments/assets/d52b07e0-f35d-4a9a-b7b3-3042c6a32a1d)
+![nextjs](https://github.com/user-attachments/assets/40a2ba66-a406-48f2-bdae-a113e6dc1f73)
+![zustand](https://github.com/user-attachments/assets/59888fd3-c939-4220-a1e2-b42955a0696e)
+![taildwild](https://github.com/user-attachments/assets/032fce8d-3ac1-4d98-aed3-746ee93aa810)
+
+
 
 Contribuir a TELEMED:
 
