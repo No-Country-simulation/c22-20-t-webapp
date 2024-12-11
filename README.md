@@ -36,7 +36,10 @@ Diseño UX/UI:
 
 QA:
 ![jira](https://github.com/user-attachments/assets/2236ea5c-a080-4629-9d8b-c311bc3b39de)
+![logoligthhpuse](https://github.com/user-attachments/assets/3b0c3cfb-e70c-4d28-ba9d-ee89d4c420c4)
 ![trello](https://github.com/user-attachments/assets/b14d9107-4b2b-49a8-96c6-efa0365230c7)
 
+## Metricas del rendimiento de la WebApp:
+![ligth](https://github.com/user-attachments/assets/28e69d32-23e7-4271-a794-f17c89c4df67)
 
 #### Contribuir a TELEMED: Si estás interesado en colaborar en el desarrollo de TELEMED, te invitamos a explorar nuestro código fuente y enviar tus propuestas de mejora.
