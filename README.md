@@ -40,6 +40,14 @@ QA:
 ![trello](https://github.com/user-attachments/assets/b14d9107-4b2b-49a8-96c6-efa0365230c7)
 
 ## Metricas del rendimiento de la WebApp:
-![ligth](https://github.com/user-attachments/assets/28e69d32-23e7-4271-a794-f17c89c4df67)
+![lighthouse](https://github.com/user-attachments/assets/03a078fd-4d05-4c15-b325-a9cc69c8b714)
 
-#### Contribuir a TELEMED: Si estás interesado en colaborar en el desarrollo de TELEMED, te invitamos a explorar nuestro código fuente y enviar tus propuestas de mejora.
+Las métricas de Lighthouse revelan que la aplicación de telemedicina no solo funciona de manera rápida y eficiente, sino que también es inclusiva y fácil de encontrar en línea. Los altos puntajes en accesibilidad garantizan que la aplicación pueda ser utilizada por personas con discapacidades, mientras que la optimización SEO asegura una mayor visibilidad en los resultados de búsqueda. 
+
+Estos resultados posicionan a nuestra aplicación web como un referente en el sector de la telemedicina. Reflejan directamente en una experiencia de usuario excepcional. La velocidad de carga, la facilidad de uso y la optimización de recursos garantizan que los pacientes puedan acceder a los servicios de telemedicina de manera rápida y sencilla, mejorando así su satisfacción y fidelidad."
+
+#### Las pruebas realizadas en la WebApp “Telemed” han revelado un producto sólido y funcional. Los defectos identificados en el módulo de reservas han sido solucionados y las pruebas de regresión han confirmado la estabilidad de la aplicación. Se recomienda realizar pruebas de usabilidad con usuarios reales para obtener feedback y realizar ajustes en la interfaz de usuario. Además, se sugiere explorar la posibilidad de integrar la aplicación con otros sistemas de salud para ampliar su alcance y también de hacer efectivo el registro con Gmail para facilitar el proceso. 
+Agradecemos la colaboración de todos los equipos involucrados en este proyecto.
+
+
+##### Contribuir a TELEMED: Si estás interesado en colaborar en el desarrollo de TELEMED, te invitamos a explorar nuestro código fuente y enviar tus propuestas de mejora.
