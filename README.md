@@ -8,6 +8,7 @@
 ### QA MANUAL:   [Cynthia Garrido](https://www.linkedin/in/cynthia-garrido) & [Erika Escalante](https://github.com/Kaeri1708)
 
 ## ¿Qué es TELEMED? 
+Telemed, Salud conectada
 
 ![banner](https://github.com/user-attachments/assets/49994382-47cb-44d2-a2d2-19a2b722b281)
 
@@ -16,6 +17,9 @@
 En el "HOME" hay acceso a 5 pestañas: NOSOTROS, OBRAS SOCIALES, PREGUNTAS FRECUENTES, CONTACTO e INGRESO.
 A través de esta WebApp, podrás:
 Agendar citas médicas online, Elegir especialistas; Realizar Consultas virtuales, visualizar historial médico.
+
+POR QUÉ NUESTRA APP OFRECE UNA GRAN SOLUCION? Por que simplifica el acceso a la salud pudiendo realizar consultas médicas a través de video llamadas, evitando largas filas, guardias saturadas y obteniendo atención médica oportuna y personalizada."
+
 
 ### Tecnologías utilizadas en el desarrollo de TELEMED
 FrontEnd: 
