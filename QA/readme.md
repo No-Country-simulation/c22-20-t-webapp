@@ -8,6 +8,9 @@
 
 [Reporte de bugs](https://docs.google.com/document/d/1zMbdVUHFzEpWacYYPenFQJv-LQPO3TND/edit?usp=sharing&ouid=108566174638418942379&rtpof=true&sd=true)
 
+[Evidencias de pruebas](https://docs.google.com/document/d/1hwMBLWcX4ElT4NlftanrSP7xkKkSXxW1Vf0g07bn86I/edit?usp=sharing)
+
+
 ## <p> Resumen del informe del primer ciclo </p>
 ### <p> Introducción </br> 
 #### <p> Este informe detalla los resultados de las pruebas de calidad (QA) realizadas de manera manual a la webapp TELEMED, con el objetivo de evaluar su funcionalidad, usabilidad y contenido. Las pruebas se centraron en la navegación del Frontend, la interacción con los elementos de la interfaz y la calidad del contenido.</p>
