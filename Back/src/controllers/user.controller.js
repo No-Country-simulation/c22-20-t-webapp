@@ -175,24 +175,37 @@ const updateUser = async (req, res) => {
   try {
     const { id } = req.params;
     const updates = req.body;
+
+    // Limpiar los espacios en los valores de tipo string
+    for (const key in updates) {
+      if (typeof updates[key] === "string") {
+        updates[key] = updates[key].trim();
+      }
+    }
+
     console.log(req.body);
     console.log(req.params);
+
     if (updates.email) {
       return res.status(400).json({ error: "No se puede actualizar el email" });
     }
+
     const updatedUser = await User.findByIdAndUpdate(id, updates, {
       new: true,
       runValidators: false,
     });
+
     if (!updatedUser) {
       return res.status(404).json({ error: "Usuario no encontrado" });
     }
+
     res.json(updatedUser);
   } catch (error) {
-    console.error("Error al actualizar usuario:");
+    console.error("Error al actualizar usuario:", error);
     res.status(500).json({ error: "Error al actualizar el usuario" });
   }
 };
+
 
 module.exports = {
   register,
