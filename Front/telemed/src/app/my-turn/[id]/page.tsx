@@ -22,13 +22,13 @@ const Page = () => {
   const doctor = searchParams.get("doctor");
   const especialidad = searchParams.get("especialidad");
 
-  const { user, selectedValueId } = useGlobalStore();
+  const { user, selectedValueId, setSelectedValue } = useGlobalStore();
 
   const handleSendInformation = async (
     e: React.MouseEvent<HTMLButtonElement>
   ) => {
     e.preventDefault();
-    setLoading(true)
+    setLoading(true);
     try {
       setDisabledButton(!disabledButton);
       const response = await fetch(
@@ -44,13 +44,14 @@ const Page = () => {
 
       const data = await response.json();
       if (response.ok) {
-        setLoading(true)
+        setLoading(true);
         Swal.fire({
           title: "¡Su turno ha sido solicitado con éxito!",
           text: "En breve será redirigido a su agenda",
           timer: 2500,
           showConfirmButton: false,
         }).then(() => {
+          setSelectedValue("");
           router.push(PATHROUTES.IN);
         });
       }
@@ -121,8 +122,8 @@ const Page = () => {
               width={20}
             />
             <p>
-              24 horas antes del turno agendado, recibirá por mail el enlace a
-              Meet
+              El enlace para su videollamada será enviado a su correo
+              electrónico.
             </p>
           </div>
         </div>

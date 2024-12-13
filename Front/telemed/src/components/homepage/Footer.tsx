@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <>
       {/*  {isHomePage && ( */}
-      <footer className="w-full purple">
+      <footer className="w-full bg-[#7c4bd8]">
         <div className="container mx-auto h-24 flex items-center justify-center">
           <p className="text-sm text-white">
             Copyright © 2024 Telemed | All Rights Reserved{" "}

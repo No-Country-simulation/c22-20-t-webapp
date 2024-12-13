@@ -44,7 +44,7 @@ const Page = () => {
       }
     };
     fetchAppointments();
-  }, [user?.id]);
+  }, []);
 
   return (
     <div className="flex flex-col items-center space-y-6 p-8">
@@ -82,9 +82,11 @@ const Page = () => {
         </div>
 
         {/* Contenedor con el borde alrededor de las cards */}
-        <div className="relative w-full max-w-3xl border border-celeste bg-celeste z-0 px-12 py-6 space-y-5 shadow-xl rounded-t-none rounded-tr-xl rounded-br-xl rounded-bl-xl">
+        <div className="relative w-full min-h-[422px] max-w-3xl border border-celeste bg-celeste z-0 px-12 py-6 space-y-5 shadow-xl rounded-t-none rounded-tr-xl rounded-br-xl rounded-bl-xl">
           {section === "nextAppoitments" && allAppointments.length === 0 && (
-            <span>No hay citas proximas</span>
+            <span className="flex flex-col items-center bg-white border shadow-xl rounded-md px-6 py-8 w-full">
+              Solicite su turno para poder acceder a su agenda
+            </span>
           )}
           {section === "nextAppoitments" &&
             allAppointments.map((appointment, index) => (
@@ -123,7 +125,12 @@ const Page = () => {
                   </div>
 
                   <div className="flex">
-                    <Image src={`${appointment.doctor.especialidad}.svg`} alt={`${appointment.doctor.especialidad}`} width={20} height={20} />
+                    <Image
+                      src={`${appointment.doctor.especialidad}.svg`}
+                      alt={`${appointment.doctor.especialidad}`}
+                      width={20}
+                      height={20}
+                    />
                     <p className="text-sm ml-2 capitalize">
                       {appointment.doctor.especialidad}
                     </p>
@@ -138,8 +145,8 @@ const Page = () => {
                     />
 
                     <p className="text-sm ml-2">
-                      24 horas antes del turno agendado, recibirás por email el
-                      enlace a Meet.
+                      Revise su correo, el enlace para su videollamada ha sido
+                      enviado.
                     </p>
                   </div>
                 </div>
