@@ -78,41 +78,56 @@ const login = async function (req, res) {
   }
 };
 
-const googleLogin = async function (req, res) {
+const loginGoogle = async (req, res) => {
   try {
-    const user = req.user; // Usuario recuperado por Passport
-    if (!user) {
-      return res.status(401).json({ error: "Usuario no autorizado" });
+    // Validación del body
+    const { email } = req.body;
+
+    if (!email) {
+      return res.status(400).json({
+        success: false,
+        message: "Email is required",
+      });
     }
 
-    // Crear un objeto con los datos básicos del usuario
+    // Busca el usuario en la base de datos
+    const user = await User.findOne({ email }).populate("healthcareSystem");
+
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: "User not found",
+      });
+    }
+
+    // Prepara los datos del usuario para la respuesta
     const userData = {
-      id: user._id,
+      id: user.id,
       name: user.name,
+      lastName: user.lastName,
       email: user.email,
+      phone: user.phone,
+      gender: user.gender,
+      age: user.age,
+      idAfiliado: user.idAfiliado,
+      healthcareSystem: user.healthcareSystem,
     };
 
-    // Generar JWT
-    const token = jwt.sign(
-      { id: user._id, role: user.role },
-      process.env.JWT_SECRET,
-      { expiresIn: process.env.EXPIRES }
-    );
-
-    // Configurar cookie con el JWT
-    const dateLimit = new Date(Date.now() + 1000 * 60 * 60 * 24);
-    res.cookie("jwt", token, { expires: dateLimit, httpOnly: true });
-
-    const frontendURL =
-      process.env.REDIRECT_URL || "http://localhost:3000/auth/callback";
-    const redirectURL = `${frontendURL}/in?name=${encodeURIComponent(
-      userData.name
-    )}&email=${encodeURIComponent(userData.email)}&id=${userData.id}`;
-
-    res.redirect(redirectURL);
+    // Devuelve la respuesta al frontend
+    return res.status(200).json({
+      success: true,
+      message: "User fetched successfully",
+      data: userData,
+    });
   } catch (error) {
-    console.error("Error en googleLogin:", error);
-    res.status(500).json({ error: "Error interno del servidor" });
+    // Log del error para depuración
+    console.error("Error fetching user data:", error);
+
+    // Devuelve una respuesta de error al cliente
+    return res.status(500).json({
+      success: false,
+      message: "Internal server error",
+    });
   }
 };
 
@@ -202,7 +217,7 @@ const updateUser = async (req, res) => {
 module.exports = {
   register,
   login,
-  googleLogin,
+  loginGoogle,
   getSpecialty,
   getPatientShifts,
   updateUser,
